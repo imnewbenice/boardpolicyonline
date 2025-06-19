@@ -1,16 +1,17 @@
-fetch('data/latest.json')
+fetch('data/files.json')
   .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById('policy-changes');
-    container.innerHTML = data.changes.map(change => `
-      <div class="change">
-        <h3>${change.title}</h3>
-        <p><strong>Status:</strong> ${change.status}</p>
-        <p>${change.summary}</p>
-      </div>
-    `).join('');
+  .then(files => {
+    const sorted = files.sort().reverse();
+    const [latest, previous] = sorted;
+    return Promise.all([
+      fetch('data/' + latest).then(r => r.json()),
+      fetch('data/' + previous).then(r => r.json())
+    ]);
+  })
+  .then(([latestData, previousData]) => {
+    const changes = document.getElementById("policy-results");
+    changes.innerHTML = '<p>Compare logic would go here. Placeholder rendering.</p>';
   })
   .catch(err => {
-    console.error('Failed to load JSON:', err);
-    document.getElementById('policy-changes').innerHTML = '<p>Error loading policy data.</p>';
+    document.getElementById("policy-results").innerHTML = '<p>Error loading data.</p>';
   });

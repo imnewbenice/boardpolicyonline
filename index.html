@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Board Policy Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Board Policy Dashboard</h1>
+  <div id="filter-container">
+    <input type="text" id="search" placeholder="Search title or ID...">
+    <select id="change-filter">
+      <option value="">All Changes</option>
+      <option value="new">New</option>
+      <option value="updated">Updated</option>
+      <option value="removed">Removed</option>
+      <option value="reinstated">Reinstated</option>
+      <option value="corrected">Corrected</option>
+    </select>
+  </div>
+  <div id="policy-list"></div>
+
+  <div id="modal" class="hidden">
+    <div id="modal-content"></div>
+    <button id="close-modal">Close</button>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

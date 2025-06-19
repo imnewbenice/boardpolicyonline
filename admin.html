@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Admin Access</h1>
+  <div id="admin-login">
+    <input type="password" id="admin-pass" placeholder="Enter password">
+    <button onclick="checkPassword()">Login</button>
+  </div>
+  <div id="admin-panel" class="hidden">
+    <p>Welcome, admin. Here you can download reports and manage snapshots.</p>
+    <a href="data/latest.json" download>📥 Download Current JSON</a>
+    <!-- Add more admin tools later -->
+  </div>
+  <script src="js/admin.js"></script>
+</body>
+</html>

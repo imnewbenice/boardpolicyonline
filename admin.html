@@ -6,6 +6,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header>
+    <img src="assets/apple-logo.png" alt="Logo" class="logo" />
+    <h1>AF Board Policy Monitor</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="admin.html">Admin</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
   <h1>Admin Access</h1>
   <div id="admin-login">
     <input type="password" id="admin-pass" placeholder="Enter password">
@@ -14,8 +23,10 @@
   <div id="admin-panel" class="hidden">
     <p>Welcome, admin. Here you can download reports and manage snapshots.</p>
     <a href="data/latest.json" download>📥 Download Current JSON</a>
-    <!-- Add more admin tools later -->
   </div>
+  <footer>
+    <p>&copy; 2025 AF Board Policy Monitor</p>
+  </footer>
   <script src="js/admin.js"></script>
 </body>
 </html>

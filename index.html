@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Board Policy Dashboard</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>AF Board Policy Monitor</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <h1>Board Policy Dashboard</h1>
-  <div id="filter-container">
-    <input type="text" id="search" placeholder="Search title or ID...">
-    <select id="change-filter">
-      <option value="">All Changes</option>
-      <option value="new">New</option>
-      <option value="updated">Updated</option>
-      <option value="removed">Removed</option>
-      <option value="reinstated">Reinstated</option>
-      <option value="corrected">Corrected</option>
-    </select>
-  </div>
-  <div id="policy-list"></div>
-
-  <div id="modal" class="hidden">
-    <div id="modal-content"></div>
-    <button id="close-modal">Close</button>
-  </div>
-
+  <header>
+    <img src="assets/apple-logo.png" alt="Logo" class="logo" />
+    <h1>AF Board Policy Monitor</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="admin.html">Admin</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Latest Policy Changes</h2>
+    <div id="policy-changes"></div>
+  </main>
+  <footer>
+    <p>&copy; 2025 AF Board Policy Monitor</p>
+  </footer>
   <script src="js/dashboard.js"></script>
 </body>
 </html>

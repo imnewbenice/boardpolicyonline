@@ -12,7 +12,6 @@ A public-facing dashboard that tracks changes to Agua Fria Union High School Dis
 ## 🔁 Data Source
 
 - Pulled from: [BoardPolicyOnline – Agua Fria](https://www.boardpolicyonline.com/bl/?b=agua_fria)
-- Scraping is handled via Python (Playwright or HTTP POST method)
 - Policy content is hashed and compared against previous versions to detect:
   - ✅ No Change
   - 📝 Changed
@@ -20,13 +19,6 @@ A public-facing dashboard that tracks changes to Agua Fria Union High School Dis
   - ➖ Removed
   - 🔁 Reinstated
   - ⚠️ Corrected (in case of prior load failure)
-
-## 🛠️ How to Update the Dashboard
-
-1. Run your scraper script (e.g. `python scrape_and_compare.py`)
-2. Replace `data/latest.json` in this repository with the new version
-3. Commit and push the change to GitHub
-4. GitHub Pages will auto-update your public dashboard
 
 ## 👥 Audience
 
